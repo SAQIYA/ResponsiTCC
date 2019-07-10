@@ -50,11 +50,11 @@
         // mencetak / menampilkan data
         echo "<tr>";
         echo "<td>$no</td>"; 
-        echo "<td>$data[noKTP</td>"; 
-        echo "<td>$data[namaPanjang]</td>"; 
-        echo "<td>$data[jenisKelamin]</td>"; 
-        echo "<td>$data[alamat]</td>";
-        echo "<td>$data[pekerjaan]</td>"; 
+        echo "<td>$data['noKTP']</td>"; 
+        echo "<td>$data['namaPanjang']</td>"; 
+        echo "<td>$data['jenisKelamin']</td>"; 
+        echo "<td>$data['alamat']</td>";
+        echo "<td>$data['pekerjaan']</td>"; 
 		
         // membuat link untuk mengedit dan menghapus data
         echo '<td>
