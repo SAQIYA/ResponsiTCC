@@ -4,7 +4,7 @@
 
     $ktp	= $_POST['noKTP'];
     $nama 	= $_POST['namaPanjang'];
-    $jk 		= $_POST['jenisKelamin'];
+    $jk 		= $_POST['jk'];
     $alamat 	= $_POST['alamat'];
     $status		= $_POST['statusKawin'];
     $pekerjaan 	= $_POST['pekerjaan'];
