@@ -15,7 +15,6 @@ if (isset($_POST['input'])) {
 
   // jalankan query INSERT untuk menambah data ke database
   $query = "INSERT INTO dataPenduduk SET
-            id = NULL,
             noKTP = '$noKTP',
             namaPanjang = '$nama',
             jenisKelamin = '$jk',
