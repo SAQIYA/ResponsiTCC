@@ -1,11 +1,11 @@
 <?php
    $link = mysqli_connect('db','user','test','Penduduk');
 
-  if (isset($_GET["id"])) {
+  if (isset($_GET["noKTP"])) {
 
-    $id = $_GET["id"];
+    $noKTP = $_GET["noKTP"];
 
-    $query = "DELETE FROM dataPenduduk WHERE id='$id' ";
+    $query = "DELETE FROM dataPenduduk WHERE noKTP='$noKTP' ";
     $hasil_query = mysqli_query($link, $query);
 
     if(!$hasil_query) {

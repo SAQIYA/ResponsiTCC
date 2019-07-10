@@ -22,18 +22,17 @@
     <br/>
     <table border="1">
       <tr>
-        <th>No</th>
-        <th>no KTP</th>
+        <th>No KTP</th>
         <th>Nama Panjang</th>
         <th>Jenis Kelamin</th>
         <th>Alamat</th>
         <th>Status Kawin</th>
-        <th>pekerjaan</th>
+        <th>Pekerjaan</th>
 		<th>Opsi</th>
       </tr>
       <?php
       // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-      $query = "SELECT * FROM dataPenduduk ORDER BY id ASC";
+      $query = "SELECT * FROM dataPenduduk";
       $result = mysqli_query($link, $query);
       //mengecek apakah ada error ketika menjalankan query
       if(!$result){
@@ -42,28 +41,27 @@
       }
 
       //buat perulangan untuk element tabel dari data mahasiswa
-      $no = 1; //variabel untuk membuat nomor urut
+      
       // hasil query akan disimpan dalam variabel $data dalam bentuk array
       // kemudian dicetak dengan perulangan while
       while($data = mysqli_fetch_assoc($result))
       {
         // mencetak / menampilkan data
         echo "<tr>";
-        echo "<td>$no</td>"; 
         echo "<td>".$data['noKTP']."</td>"; 
         echo "<td>".$data['namaPanjang']."</td>"; 
         echo "<td>".$data['jenisKelamin']."</td>"; 
         echo "<td>".$data['alamat']."</td>";
+        echo "<td>".$data['statusKawin']."</td>";
         echo "<td>".$data['pekerjaan']."</td>"; 
 		
         // membuat link untuk mengedit dan menghapus data
         echo '<td>
-          <a href="edit.php?id='.$data['id'].'">Edit</a> 
-          <a href="hapus.php?id='.$data['id'].'"
+          <a href="edit.php?noKTP='.$data['noKTP'].'">Edit</a> 
+          <a href="hapus.php?noKTP='.$data['noKTP'].'"
       		  onclick="return confirm(\'Anda yakin akan menghapus data?\')">Hapus</a>
         </td>';
         echo "</tr>";
-        $no++; // menambah nilai nomor urut
       }
       ?>
     </table>

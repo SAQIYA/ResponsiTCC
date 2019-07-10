@@ -10,11 +10,20 @@ if (isset($_POST['input'])) {
   $nama = $_POST['namaPanjang'];
   $jk = $_POST['jk'];
   $alamat = $_POST['alamat'];
-  $status = $_POST['status Kawin'];
+  $status = $_POST['statusKawin'];
   $pekerjaan = $_POST['pekerjaan'];
 
   // jalankan query INSERT untuk menambah data ke database
-  $query = "INSERT INTO dataPenduduk VALUES (NULL, '$noKTP', '$namaPanjang', '$jk','$alamat',$statusKawin,'$pekerjaan')";
+  $query = "INSERT INTO dataPenduduk SET
+            id = NULL,
+            noKTP = '$noKTP',
+            namaPanjang = '$nama',
+            jenisKelamin = '$jk',
+            alamat = '$alamat',
+            statusKawin = '$status',
+            pekerjaan = '$pekerjaan'
+            ";
+
   $result = mysqli_query($link, $query);
   // periska query apakah ada error
   if(!$result){

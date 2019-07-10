@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `dataPenduduk` (
-  `id` int(11) NOT NULL,
   `noKTP` varchar(20) DEFAULT NULL,
   `namaPanjang` varchar(20) DEFAULT NULL,
   `jenisKelamin` varchar(20) DEFAULT NULL,
@@ -42,11 +41,6 @@ CREATE TABLE `dataPenduduk` (
 -- Dumping data for table `dataPenduduk`
 --
 
-INSERT INTO `dataPenduduk` (`id`, `noKTP`,'namaPanjang', `jenisKelamin`, `alamat`, `statusKawin`, `pekerjaan`) VALUES
-(10, '1716812828', 'Zilong Zizah', 'Perempuan', 'wakanda', 'Kawin', 'mahasiswa'),
-(10, '1716812828', 'Zilong Zizah', 'Perempuan', 'wakanda', 'Kawin', 'mahasiswa'),
-(18, '1371838', 'Yudi', 'Laki-Laki', 'Jogja', 'Kawin', 'solo');
-
 --
 -- Indexes for dumped tables
 --
@@ -54,8 +48,6 @@ INSERT INTO `dataPenduduk` (`id`, `noKTP`,'namaPanjang', `jenisKelamin`, `alamat
 --
 -- Indexes for table `dataPenduduk`
 --
-ALTER TABLE `dataPenduduk`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -64,8 +56,6 @@ ALTER TABLE `dataPenduduk`
 --
 -- AUTO_INCREMENT for table `dataPenduduk`
 --
-ALTER TABLE `dataPenduduk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

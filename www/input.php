@@ -18,16 +18,16 @@
         <fieldset>
         <legend>Input Penduduk</legend>
           <p>
-            <label for="no">no Ktp : </label>
-            <input type="text" name="noKTP" id="namadep" placeholder=" ">
+            <label for="noKTP">No Ktp : </label>
+            <input type="text" name="noKTP" id="noKTP">
           </p>
           <p>
-            <label for="nama">Nama Panjang: </label>
+            <label for="namaPanjang">Nama Panjang: </label>
             <input type="text" name="namaPanjang" id="namaPanjang">
           </p>
           <p>
             <label for="jk" >Jenis Kelamin : </label>
-              <select name="jk" id="jenisKelamin">
+              <select name="jk" id="jk">
                 <option value="Laki-Laki">Laki-Laki </option>
                 <option value="Perempuan">Perempuan</option>
               </select>
@@ -37,12 +37,12 @@
             <input type="text" name="alamat" id="alamat">
           </p>
           <p >
-            <label for="status">Status Kawin : </label>
-            <input type="text" name="no" id="no" placeholder=" ">
+            <label for="statusKawin">Status Kawin : </label>
+            <input type="text" name="statusKawin" id="statusKawin">
           </p>
 		  <p >
             <label for="pekerjaan">pekerjaan : </label>
-            <input type="text" name="email" id="email" placeholder=" ">
+            <input type="text" name="pekerjaan" id="pekerjaan">
           </p>
 
         </fieldset>
