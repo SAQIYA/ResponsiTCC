@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk melakukan koneksi database
-  $link = mysqli_connect('db','user','test','Penduduk');
+  $link = mysqli_connect('db','user','test',"Penduduk");
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
         <th>Nama Panjang</th>
         <th>Jenis Kelamin</th>
         <th>Alamat</th>
-        <th>Alamat</th>
+        <th>Status Kawin</th>
         <th>pekerjaan</th>
 		<th>Opsi</th>
       </tr>
