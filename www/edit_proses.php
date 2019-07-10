@@ -1,5 +1,5 @@
 <?php
-  $link = mysqli_connect('db','user','test',"dataPenduduk");
+  $link = mysqli_connect('db','user','test','Penduduk');
   if (isset($_GET["id"])) {
 
     $id = $_GET["id"];

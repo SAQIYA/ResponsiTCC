@@ -16,7 +16,7 @@
     <div class="container">
       <form id="id" action="input_proses.php" method="post">
         <fieldset>
-        <legend>Input Biodata</legend>
+        <legend>Input Penduduk</legend>
           <p>
             <label for="no">no Ktp : </label>
             <input type="text" name="noKTP" id="namadep" placeholder=" ">

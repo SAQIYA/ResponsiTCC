@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk membuat koneksi
-  $link = mysqli_connect('db','user','test',"dataPenduduk");
+  $link = mysqli_connect('db','user','test','Penduduk');
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {

@@ -1,6 +1,6 @@
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
-  $link = mysqli_connect('db','user','test',"dataPenduduk");
+  $link = mysqli_connect('db','user','test','Penduduk');
 
 // mengecek apakah tombol input dari form telah diklik
 if (isset($_POST['input'])) {
