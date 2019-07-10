@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk melakukan koneksi database
-  include 'koneksi.php';
+  $link = mysqli_connect('db','user','test',"biodata2");
 ?>
 
 <!DOCTYPE html>

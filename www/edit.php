@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk membuat koneksi
-  include 'koneksi.php';
+  $link = mysqli_connect('db','user','test',"biodata2");
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {

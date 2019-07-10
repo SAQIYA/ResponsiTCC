@@ -1,5 +1,5 @@
 <?php
-  include("koneksi.php");
+   $link = mysqli_connect('db','user','test',"biodata2");
 
   if (isset($_GET["id"])) {
 
