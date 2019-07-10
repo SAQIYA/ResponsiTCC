@@ -1,24 +1,24 @@
 <?php
-  $link = mysqli_connect('db','user','test',"biodata2");
+  $link = mysqli_connect('db','user','test',"dataPenduduk");
   if (isset($_GET["id"])) {
 
     $id = $_GET["id"];
-  $namadep 	= $_POST['namadep'];
-  $namabel 	= $_POST['namabel'];
-  $jk 		= $_POST['jk'];
+  $ktp	= $_POST['noKTP'];
+  $nama 	= $_POST['namaPanjang'];
+  $jk 		= $_POST['jenisKelamin'];
   $alamat 	= $_POST['alamat'];
-  $no 		= $_POST['no'];
-  $email 	= $_POST['email'];
+  $status		= $_POST['statusKawin'];
+  $pekerjaan 	= $_POST['pekerjaan'];
  
 
   
-  $query  = "UPDATE biodata2 SET 
-  namaDepan='$namadep', 
-  namaBelakang='$namabel',
+  $query  = "UPDATE dataPenduduk SET 
+  noKTP='$ktp', 
+  namaPanjang='$nama',
   jenisKelamin='$jk',
   alamat='$alamat',
-  noTelp='$no',
-  email='$email'
+  statusKawin='$status',
+  pekerjaan='$pekerjaan'
   WHERE id=$id";
   
   

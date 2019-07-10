@@ -18,30 +18,30 @@
         <fieldset>
         <legend>Input Biodata</legend>
           <p>
-            <label for="nim">Nama Depan : </label>
-            <input type="text" name="namadep" id="namadep" placeholder=" ">
+            <label for="no">no Ktp : </label>
+            <input type="text" name="noKTP" id="namadep" placeholder=" ">
           </p>
           <p>
-            <label for="nama">Nama Belakang: </label>
-            <input type="text" name="namabel" id="namabel">
+            <label for="nama">Nama Panjang: </label>
+            <input type="text" name="namaPanjang" id="namaPanjang">
           </p>
           <p>
-            <label for="fakultas" >Jenis Kelamin : </label>
+            <label for="jk" >Jenis Kelamin : </label>
               <select name="jk" id="jenisKelamin">
                 <option value="Laki-Laki">Laki-Laki </option>
                 <option value="Perempuan">Perempuan</option>
               </select>
           </p>
           <p>
-            <label for="jurusan">Alamat : </label>
+            <label for="alamat">Alamat : </label>
             <input type="text" name="alamat" id="alamat">
           </p>
           <p >
-            <label for="ipk">No Telp : </label>
+            <label for="status">Status Kawin : </label>
             <input type="text" name="no" id="no" placeholder=" ">
           </p>
 		  <p >
-            <label for="ipk">E-mail : </label>
+            <label for="pekerjaan">pekerjaan : </label>
             <input type="text" name="email" id="email" placeholder=" ">
           </p>
 

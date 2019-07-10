@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk melakukan koneksi database
-  $link = mysqli_connect('db','user','test',"biodata2");
+  $link = mysqli_connect('db','user','test',"dataPenduduk");
 ?>
 
 <!DOCTYPE html>
@@ -23,17 +23,17 @@
     <table border="1">
       <tr>
         <th>No</th>
-        <th>Nama Depan</th>
-        <th>Nama Belakang</th>
+        <th>no KTP</th>
+        <th>Nama Panjang</th>
         <th>Jenis Kelamin</th>
         <th>Alamat</th>
-        <th>No Telp</th>
-        <th>E-mail</th>
+        <th>Alamat</th>
+        <th>pekerjaan</th>
 		<th>Opsi</th>
       </tr>
       <?php
       // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-      $query = "SELECT * FROM biodata2 ORDER BY id ASC";
+      $query = "SELECT * FROM dataPenduduk ORDER BY id ASC";
       $result = mysqli_query($link, $query);
       //mengecek apakah ada error ketika menjalankan query
       if(!$result){
@@ -50,12 +50,12 @@
         // mencetak / menampilkan data
         echo "<tr>";
         echo "<td>$no</td>"; 
-        echo "<td>$data[namaDepan]</td>"; 
-        echo "<td>$data[namaBelakang]</td>"; 
+        echo "<td>$data[noKTP</td>"; 
+        echo "<td>$data[namaPanjang]</td>"; 
         echo "<td>$data[jenisKelamin]</td>"; 
         echo "<td>$data[alamat]</td>";
-        echo "<td>$data[noTelp]</td>"; 
-		echo "<td>$data[email]</td>"; 
+        echo "<td>$data[pekerjaan]</td>"; 
+		
         // membuat link untuk mengedit dan menghapus data
         echo '<td>
           <a href="edit.php?id='.$data['id'].'">Edit</a> 

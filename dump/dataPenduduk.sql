@@ -19,44 +19,42 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `biodata2`
+-- Database: `dataPenduduk`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biodata2`
+-- Table structure for table `dataPenduduk`
 --
 
-CREATE TABLE `biodata2` (
+CREATE TABLE `dataPenduduk` (
   `id` int(11) NOT NULL,
-  `namaDepan` varchar(20) DEFAULT NULL,
-  `namaBelakang` varchar(20) DEFAULT NULL,
+  `noKTP` varchar(20) DEFAULT NULL,
+  `namaPanjang` varchar(20) DEFAULT NULL,
   `jenisKelamin` varchar(20) DEFAULT NULL,
   `alamat` varchar(20) DEFAULT NULL,
-  `noTelp` varchar(20) DEFAULT NULL,
-  `email` varchar(20) DEFAULT NULL
+  `statusKawin` varchar(20) DEFAULT NULL,
+  `pekerjaan` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `biodata2`
+-- Dumping data for table `dataPenduduk`
 --
 
-INSERT INTO `biodata2` (`id`, `namaDepan`, `namaBelakang`, `jenisKelamin`, `alamat`, `noTelp`, `email`) VALUES
-(10, 'sugeng', '123456789', 'waria', 'wakanda', '0878899112233', 'sugengmut@yahoo.com'),
-(11, 'aaasd', '12345679', 'Laki-Laki', 'sleman', '08781818111', 'asdasd@yahoo.com'),
-(12, 'fjar', '12345679', 'Laki', 'sleman', '08781818111', 'asdasd@yahoo.com'),
-(17, 'aaaaaa', 'Yudi', 'Laki-Laki', 'Jogja', '99', 'dyanfajar0@gmail.com'),
-(18, 'Fajar', 'Yudi', 'Laki-Laki', 'Jogja', '123', 'dyanfajar0@gmail.com');
+INSERT INTO `dataPenduduk` (`id`, `noKTP`,'namaPanjang', `jenisKelamin`, `alamat`, `statusKawin`, `pekerjaan`) VALUES
+(10, '1716812828', 'Zilong Zizah', 'Perempuan', 'wakanda', 'Kawin', 'mahasiswa'),
+(10, '1716812828', 'Zilong Zizah', 'Perempuan', 'wakanda', 'Kawin', 'mahasiswa'),
+(18, '1371838', 'Yudi', 'Laki-Laki', 'Jogja', 'Kawin', 'solo');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `biodata2`
+-- Indexes for table `dataPenduduk`
 --
-ALTER TABLE `biodata2`
+ALTER TABLE `dataPenduduk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -64,9 +62,9 @@ ALTER TABLE `biodata2`
 --
 
 --
--- AUTO_INCREMENT for table `biodata2`
+-- AUTO_INCREMENT for table `dataPenduduk`
 --
-ALTER TABLE `biodata2`
+ALTER TABLE `dataPenduduk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

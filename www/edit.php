@@ -1,6 +1,6 @@
 <?php
   // memanggil file koneksi.php untuk membuat koneksi
-  $link = mysqli_connect('db','user','test',"biodata2");
+  $link = mysqli_connect('db','user','test',"dataPenduduk");
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {
@@ -8,23 +8,23 @@
     $id = ($_GET["id"]);
 
     // menampilkan data  dari database yang mempunyai id=$id
-    $query = "SELECT * FROM biodata2 WHERE id='$id'";
+    $query = "SELECT * FROM dataPenduduk WHERE id='$id'";
     $result = mysqli_query($link, $query);
     // mengecek apakah query gagal
     if(!$result){
-      die ("Query Error: ".mysqli_errno($link).
+      die ("Query Error: ".mysqli_errstatusKawin($link).
          " - ".mysqli_error($link));
     }
     // mengambil data dari database dan membuat variabel" utk menampung data
     // variabel ini nantinya akan ditampilkan pada form
 	$data = mysqli_fetch_assoc($result);
-		$namadep = $data["namaDepan"];
-		$namabel = $data["namaBelakang"];
-		$jk 	 = $data["jenisKelamin"];
-		$alamat  = $data["alamat"];
-		$no 	 = $data["noTelp"];
-		$email   = $data["email"];
-
+	
+		$ktp = $data["noKTP"];
+		$nama = $data["namaPanjang"];
+		$jk  = $data["jenisKelamin"];
+		$alamat	 = $data["alamat"];
+		$status   = $data["statusKawin"];
+		$pekerjaan= $data["pekerjaan"];
   } else {
     // apabila tidak ada data GET id pada akan di redirect ke index.php
     header("location:index.php");
@@ -45,19 +45,19 @@
     </style>
   </head>
   <body>
-    <h1>Edit Biodata</h1>
+    <h1>Edit dataPenduduk</h1>
     <div class="container">
       <form id="id" action="edit_proses.php?id='<?php echo $data['id']?>'" method="post">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <fieldset>
-        <legend>Edit Biodata</legend>
+        <legend>Edit dataPenduduk</legend>
           <p>
-            <label for="namadep">Nama Depan : </label>
-            <input type="text" name="namadep" id="namadep" value="<?php echo $namadep ?>">
+            <label for="noKTP">noKTP : </label>
+            <input type="text" name="noKTP" id="noKTP" value="<?php echo $noKTP ?>">
           </p>
           <p>
-            <label for="namabel">Nama Belakang: </label>
-            <input type="text" name="namabel" id="namabel" value="<?php echo $namabel ?>">
+            <label for="namaPanjang">Nama Panjang: </label>
+            <input type="text" name="namaPanjang" id="namaPanjang" value="<?php echo $namaPanjang ?>">
           </p>
           <p>
             <label for="jk" >Jenis Kelamin : </label>
@@ -73,12 +73,12 @@
             <input type="text" name="alamat" id="alamat" value="<?php echo $alamat ?>">
           </p>
           <p >
-            <label for="no">No Telp : </label>
-            <input type="text" name="no" id="no" value="<?php echo $no ?>">
+            <label for="statusKawin">status Kawin  : </label>
+            <input type="text" name="statusKawin" id="statusKawin" value="<?php echo $statusKawin ?>">
           </p>
 		  <p >
-            <label for="email">E-mail : </label>
-            <input type="text" name="email" id="email" value="<?php echo $email ?>">
+            <label for="pekerjaan">Pekerjaan : </label>
+            <input type="text" name="pekerjaan" id="pekerjaan" value="<?php echo $pekerjaan ?>">
           </p>
         </fieldset>
         <p>
