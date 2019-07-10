@@ -47,24 +47,22 @@
   <body>
     <h1>Edit dataPenduduk</h1>
     <div class="container">
-      <form action="edit_proses.php?noKTP='<?php echo $data['noKTP']?>'" method="post">
+      <form action="edit_proses.php?noKTP='<?php echo $ktp?>'" method="post">
         <fieldset>
         <legend>Edit dataPenduduk</legend>
           <p>
             <label for="noKTP">No KTP : </label>
-            <input type="text" name="noKTP" id="noKTP" value="<?php echo $noKTP; ?>">
+            <input type="text" name="noKTP" id="noKTP" value="<?php echo $ktp; ?>">
           </p>
           <p>
             <label for="namaPanjang">Nama Panjang: </label>
-            <input type="text" name="namaPanjang" id="namaPanjang" value="<?php echo $namaPanjang; ?>">
+            <input type="text" name="namaPanjang" id="namaPanjang" value="<?php echo $nama; ?>">
           </p>
           <p>
             <label for="jk" >Jenis Kelamin : </label>
               <select name="jk" id="jk">
-                <option value="Laki-Laki" <?php if($data['jenisKelamin'] == 'Laki-Laki'){ echo 'selected'; } ?>>
-                Laki-Laki </option>
-                <option value="Perempuan" <?php if($data['jenisKelamin'] == 'Perempuan'){ echo 'selected'; } ?>>
-                Perempuan</option>
+                <option value="Laki-Laki">Laki-Laki </option>
+                <option value="Perempuan">Perempuan</option>
               </select>
           </p>
           <p>
@@ -73,7 +71,7 @@
           </p>
           <p >
             <label for="statusKawin">status Kawin  : </label>
-            <input type="text" name="statusKawin" id="statusKawin" value="<?php echo $statusKawin; ?>">
+            <input type="text" name="statusKawin" id="statusKawin" value="<?php echo $status; ?>">
           </p>
 		  <p >
             <label for="pekerjaan">Pekerjaan : </label>
